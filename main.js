@@ -28,7 +28,7 @@ function showItemsList() {
                     <div class="custom-checkbox">
                         <img src="./assets/checked.svg" alt="checked">
                     </div>
-                    <label for="item-${index}">${item.name}</label>
+                    <label for="item-${index}" onclick="chackItem('${item.name}')">${item.name}</label>
                 </div>
 
                 <button onclick="removeItem('${item.name}')">
@@ -51,6 +51,19 @@ function removeItem(itemName) {
 
     if(itemIndex !== -1) {
         items.splice(itemIndex, 1)
+    }
+
+    showItemsList()
+}
+
+function checkItem(itemName) {
+    const item = items.find(() => item.name === itemName)
+
+    if(item.checked === true){
+        item.checked = false
+    } 
+    else {
+        item.checked = true
     }
 
     showItemsList()
