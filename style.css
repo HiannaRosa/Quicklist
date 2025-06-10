@@ -176,6 +176,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-radius: 1.2rem;
     margin-top: 2.4rem;
     opacity: 1;
     transform: translateY(0);
@@ -195,6 +196,7 @@ main{
         border: none;
         background: none;
         color: var(--always-white);
+        cursor: pointer;
     }
 }
 
